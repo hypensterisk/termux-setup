@@ -61,6 +61,29 @@ else
 fi
 ```
 
+## Oh My Posh
+Installation\
+**Alpine:**
+```sh
+curl -s https://ohmyposh.dev/install.sh | bash -s
+```
+install a font\
+**Termux:**
+```sh
+pkg install wget
+wget 'https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Regular/FiraCodeNerdFont-Regular.ttf'
+mv 'FiraCodeNerdFont-Regular.ttf' $HOME/.termux/font.ttf
+```
+configure your shell to use Oh My Posh\
+**Alpine:**
+```sh
+sudo apk add shadow bash
+sudo chsh <login>
+# path for the shell
+# /bin/bash
+echo 'eval "$(oh-my-posh init bash)"' >> .profile
+```
+
 ## Backing up Termux
 Backing up
 ```sh
