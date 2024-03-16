@@ -53,6 +53,7 @@ proot-distro login alpine && exit
 Alpine: `$HOME/.profile`
 ```sh
 # prompts the user to decide whether to exit the Termux environment or not
+login -f <login>
 read -p "Do you want to exit Termux? [Y/N]: " isExit
 if [ "$isExit" == "y" ] || [ "$isExit" == "Y" ]; then
     exit 1
