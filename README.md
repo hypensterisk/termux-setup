@@ -43,6 +43,24 @@ EDITOR=vim visudo
 # <login> ALL=(ALL:ALL) ALL
 ```
 
+## Enable Automatic Login
+Sets the user environment at login time.\
+Termux: `$HOME/.profile`
+```sh
+# start a shell session
+proot-distro login alpine && exit
+```
+Alpine: `$HOME/.profile`
+```sh
+# prompts the user to decide whether to exit the Termux environment or not
+read -p "Do you want to exit Termux? [Y/N]: " isExit
+if [ "$isExit" == "y" ] || [ "$isExit" == "Y" ]; then
+    exit 1
+else
+    exit 0
+fi
+```
+
 ## Backing up Termux
 Backing up
 ```sh
