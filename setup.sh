@@ -5,4 +5,7 @@ proot-distro install alpine
 ALPINE=var/lib/proot-distro/installed-rootfs/alpine
 curl -o "$PREFIX/$ALPINE/root/.profile" https://raw.githubusercontent.com/hypensterisk/termux-setup/main/alpine.sh
 proot-distro login alpine
-echo "clear && proot-distro login alpine && exit" > ~/.profile
+echo "clear && proot-distro login alpine && exit" > $HOME/.profile
+curl -o "$HOME/.termux/font.ttf" https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/FiraCode/Regular/FiraCodeNerdFont-Regular.ttf
+pkg install tur-repo
+pkg install code-server
