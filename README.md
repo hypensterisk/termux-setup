@@ -1,6 +1,11 @@
 # Termux Setup
 This repository contains a collection of guides on how I set up my termux.
 
+## Setup Command Explanation Below
+```bash
+curl -o setup.sh https://raw.githubusercontent.com/hypensterisk/termux-setup/main/setup.sh && chmod +x setup.sh && setup.sh && rm setup.sh
+```
+
 ## Getting started
 You can pick a mirror by using utility
 ```sh
