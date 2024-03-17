@@ -9,3 +9,5 @@ echo "clear && proot-distro login alpine && exit" > $HOME/.profile
 curl -o "$HOME/.termux/font.ttf" https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/FiraCode/Regular/FiraCodeNerdFont-Regular.ttf
 pkg install tur-repo
 pkg install code-server
+termux-setup-storage
+tar -zcf /sdcard/termux-backup.tar.gz -C /data/data/com.termux/files ./home ./usr
